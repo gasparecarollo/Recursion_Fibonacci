@@ -15,6 +15,11 @@ const recAddition = (num) => {
     //Recursive Step
     return num + recAddition(num - 1)
 }
+//if num is 7 + recAddition(7-1) which is recAddition(6) which if you look at line 25, equals 21. 7+21 = 28
 console.log(recAddition(1)) // => Base case 1
 console.log(recAddition(2)) // => 3
 console.log(recAddition(3))// => 6
+console.log(recAddition(4))// => 10
+console.log(recAddition(5))// => 15
+console.log(recAddition(6))// => 21
+console.log(recAddition(7))// => 28
