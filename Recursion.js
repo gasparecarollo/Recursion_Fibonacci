@@ -23,3 +23,28 @@ console.log(recAddition(4))// => 10
 console.log(recAddition(5))// => 15
 console.log(recAddition(6))// => 21
 console.log(recAddition(7))// => 28
+
+const recAddition1 = (num) => {
+    //write your base case
+    if (num === 1) {//no -> move forward to next step
+
+    }
+    //recursive step
+    return 4 + recAddition(4 - 1)//new number is 3 add 4+3 
+
+    if (3 === 1) {//no -> move forward to next step
+        //recursive step 
+        return 4 + recAddition(3 - 1) //new number is 2 add 4+3+2
+
+        if (2 === 1) {//no -> move forward to{
+            return 4 + recAddition(2 - 1) // new number is 1;  add 4+3+2
+
+            if (1 === 1) {//yes hits base case, return base case 
+                return 1 //add 4+3+2+1
+                //return 4+3+2+1 = 10
+
+            }
+        }
+    }
+}
+//console.log(recAddition1(1)) => base case: 1

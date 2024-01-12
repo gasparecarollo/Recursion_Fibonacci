@@ -125,4 +125,6 @@ function recursiveObjSearch(obj, targetValue) {
 
 
     }
+    //if iterate through all keys in object and nested objects and target value isn't found return false
+    return false;
 }
