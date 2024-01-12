@@ -30,21 +30,41 @@ const recAddition1 = (num) => {
 
     }
     //recursive step
-    return 4 + recAddition(4 - 1)//new number is 3 add 4+3 
+    return 4 + recAddition(4 - 1)//new number is 3 add 4+recAddition(3) 
 
     if (3 === 1) {//no -> move forward to next step
         //recursive step 
-        return 4 + recAddition(3 - 1) //new number is 2 add 4+3+2
+        return 4 + recAddition(3 - 1) //new number is 2 add 4 + recAddition(2)
 
         if (2 === 1) {//no -> move forward to{
-            return 4 + recAddition(2 - 1) // new number is 1;  add 4+3+2
+            return 4 + recAddition(2 - 1) // new number is 1;  add 4 + recAddition(1)
 
             if (1 === 1) {//yes hits base case, return base case 
-                return 1 //add 4+3+2+1
-                //return 4+3+2+1 = 10
+                return 1 //add 4 +recAddition(0)
 
             }
         }
     }
 }
 //console.log(recAddition1(1)) => base case: 1
+
+
+//Write a function that will take a number and multiply it by every number lower than that number until we get to one: 3! => 3*2*1 = 6 // 5! => 5 * 4 * 3 *2 *1 = 120
+const factorial = (num) => {
+    //Initialize accumulator at 1, so we can start by multiplying by 1 (not zero)
+    let total = 1
+
+    //Iterate while num is greater than zero
+
+    while (num > 0) {
+        //Multiply total by num and assign it to total
+        total = total * num
+        //Decrement//subtract one from num
+        num--
+    }
+    //Return accumulator
+    return total
+}
+
+console.log(factorial(3))
+console.log(factorial(5))
