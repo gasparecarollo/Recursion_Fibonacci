@@ -68,3 +68,25 @@ const factorial = (num) => {
 
 console.log(factorial(3))
 console.log(factorial(5))
+
+const recFactorial = (num) => {
+    //Base case
+    if (num === 1) {
+        return num
+    }
+    //Inductive step
+    return num * recFactorial(num - 1)
+}
+
+console.log(recFactorial(1)) // => Base case => 1
+console.log(recFactorial(2))// => 2
+console.log(recFactorial(3)) // => 6
+console.log(recFactorial(4))// => 24
+console.log(recFactorial(5))// => 120
+console.log(recFactorial(6))// => 720
+//Python
+// def fibonacci(n):
+// if (n < 2):
+//     return n
+// else:
+// return (fibonacci(n - 1) + fibonacci(n - 2))
